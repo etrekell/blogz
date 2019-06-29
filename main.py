@@ -16,7 +16,7 @@ class Blog(db.Model):
         self.post_title = title
         self.post_body = body
 
-@app.route('/   ', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def index():
 
     posts = Blog.query.all()
