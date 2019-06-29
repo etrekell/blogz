@@ -1,22 +1,23 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Build a Blog</h1>
+<h1>Build A Blog!</h1>
+<hr>
 <h2>Enter a new post:</h2>
 <form method='post'>
     <label>
-        Post Title:
+        Title:
+        <input type="text" name="post_title" value={{post_title}}>
     </label>
-    <input type="text" name="post_title" value={{post_title}}>
     <p class="error">{{error_title}}</p>
     <br />
     <label>
-        Post:
+        Blog:
+        <input type="textarea" name="post_body" value={{post_body}}  >
     </label>
-    <input type="textarea" name="post_body" value={{post_body}}>
     <p class="error">{{error_blog}}</p>
     <br />
-    <input type="submit" name="Submit Post" />
+    <input type="submit"/>
 </form>
 
 {% for post in posts %}
