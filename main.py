@@ -44,7 +44,7 @@ def new_post():
 
             return redirect('/single-post?id={0}'.format(new.id))
 
-    return render_template('new-post.html', title="New Post", error_title=error_title,
+    return render_template('new-post.html', title="Add a New Post", error_title=error_title,
                            error_blog=error_blog, post_title=post_title, post_body=post_body)
 
 @app.route('/single-post', methods=['GET'])

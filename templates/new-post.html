@@ -3,21 +3,23 @@
 {% block content %}
 <h1>Build A Blog!</h1>
 <hr>
-<h2>Enter a new post:</h2>
+<h2>Enter A New Post:</h2>
+
 <form method='post'>
-    <label>
-        Title:
-        <input type="text" name="post_title" value={{post_title}}>
-    </label>
+    <div class="form-group col-lg-4"">
+        <label for="title-id">Title:</label>
+        <input type="text" class="form-control" id="title-id" placeholder="Title" name="post_title" value={{post_title}}>
+    </div>
     <p class="error">{{error_title}}</p>
-    <br />
-    <label>
-        Blog:
-        <input type="textarea" name="post_body" value={{post_body}}  >
-    </label>
+
+
+    <div class="form-group col-lg-6 row-lg-2"">
+        <label for="blog-body-id">Blog</label>
+        <input type="textarea" class="form-control" id="blog-body-id" placeholder="Start a blog..." name="post_body" value={{post_body}}>
+    </div>
     <p class="error">{{error_blog}}</p>
-    <br />
-    <input type="submit"/>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
 {% for post in posts %}
